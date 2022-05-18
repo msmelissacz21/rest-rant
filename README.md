@@ -37,3 +37,25 @@ REST-Rant is an app where users can review restaurants.
 | Subway                                |          Twin Lakes       |   Wisconsin             |  Fast Food              | Search Web         |
 | Culvers                               |         Lake Geneva       |   Wisconsin             |  Fast Food              | Search Web         |
 | Texas Roadouse                        |           Kenosha         |   Wisconsin             |  Texas Food             | Search Web         |
+
+## Database Places Field and Type
+
+| Feild    | Type                  | 
+| -------- |-----------------------| 
+| _id      |        Object ID      |   
+| name     |         String        |  
+| city     |         String        | 
+| state    |         String        | 
+| cuisines |         String        |   
+| pic      |         String        | 
+
+## Database Rants Field and Type
+
+| Feild    | Type                     | 
+| -------- |--------------------------| 
+| _id      |         Object ID        |   
+| place_id |  ref(places) Object_ID   |  
+| rant     |           Boolean        | 
+| rating   |           Number         | 
+| comment  |           String         |   
+| reviewer |           String         | 
