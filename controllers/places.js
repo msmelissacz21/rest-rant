@@ -6,14 +6,22 @@ router.get('/', (req, res) => {
         city: 'Seattle',
         state: 'WA',
         cuisines: 'Thai, Pan-Asian',
-        pic: 'http://placekitten.com/250/250'
+        pic: '/images/asian-food-rest.jpg'
       }, {
         name: 'Coding Cat Cafe',
         city: 'Phoenix',
         state: 'AZ',
         cuisines: 'Coffee, Bakery',
-        pic: 'http://placekitten.com/250/250'
-      }]
+        pic: '/images/cat-cafe.jpg'
+      },
+      {
+        name: 'Sundown Seaside',
+        city: 'San Diego',
+        state: 'CA',
+        cuisines: 'Seafood, Seafood Restaurant',
+        pic: '/images/seaside-restaurant.jpg'
+      }
+    ]
       
     res.render('places/index', {places})
 })

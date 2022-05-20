@@ -2,4 +2,26 @@ h1 {
     text-align: center;
     color: cornflowerblue;
   }
-  
+
+.mainBanner {
+    width: 100vw;
+}
+
+.fourZeroFourDog {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80vh;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+    
+
+
+.placeImages {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 16px;
+}
+
