@@ -14,7 +14,22 @@ function Def (html) {
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             </head>
             <body>
-                <div  className='content'>
+                <div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href='/'>Home</a>
+                            </li>
+
+                            <li>
+                                <a href='/places'>Places</a>
+                            </li>
+
+                            <li>
+                                <a href='/places/new'>Add a Place</a>
+                            </li>
+                        </ul>
+                    </nav>
                     {html.children}
                 </div>
 
