@@ -36,7 +36,8 @@ router.get('/:id', (req,res) => {
 })
 
 router.post('/', (req,res) => {
-    res.render('places')
+    console.log(req.body)
+    res.send('POST /places')
 })
 
 module.exports = router
