@@ -7,7 +7,7 @@ function home () {
     return (
       <Def>
           <main>
-              <h1>HOME</h1>
+              <h1 className='largeNam'>REST-Rant</h1>
               <div>
                 <img className='mainBanner' src='/images/group-eating.jpg' alt='Group Eating Pizza'></img>
               </div>
