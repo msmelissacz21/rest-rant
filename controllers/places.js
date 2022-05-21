@@ -35,4 +35,8 @@ router.get('/:id', (req,res) => {
 
 })
 
+router.post('/', (req,res) => {
+    res.render('places')
+})
+
 module.exports = router
