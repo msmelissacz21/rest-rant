@@ -6,7 +6,20 @@ router.get('/', (req, res) => {
 })
 
 router.get('/new', (req,res) => {
-    res.render('places/new')
+    let d = {id: places.length}
+    res.render('places/new', d)
+})
+
+router.put('/:id', (req,res) => {
+    let newPlace = {
+        name: req.body.name,
+        pic: req.body.pic,
+        city: req.body.city,
+        state: req.body.state,
+        cuisines: req.body.cuisines
+    }
+    places.push(newPlace)
+    res.render('places/index', {places})
 })
 
 router.get('/:id', (req,res) => {
@@ -65,6 +78,9 @@ router.delete('/:id', (req, res) => {
     res.render('places/edit', { place: places[id], id })
     }
 })
+
+
+
   
   
 
