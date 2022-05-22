@@ -64,3 +64,15 @@ body {
 footer {
     margin-top: 5vh;
 }
+
+.showPicStyle {
+    max-height: 70vh;
+}
+
+.showPageFormat {
+    margin: 0vw 15vw 0vw 15vw;
+    text-align: left;
+    background-color: #C6CBC6;
+    padding: 2em;
+}
+
