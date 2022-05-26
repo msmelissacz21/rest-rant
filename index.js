@@ -1,5 +1,6 @@
 // Modules and Globals
 require('dotenv').config()
+
 const express = require('express')
 const placesRoutes = require('./controllers/places')
 const methodOverride = require('method-override')

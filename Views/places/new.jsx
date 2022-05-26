@@ -7,7 +7,7 @@ function new_form (data) {
         <Def>
             <main>
                 <h1>Add a New Place</h1>
-                <form className= 'row' method='POST' action ={`/places?_method=PUT`}>
+                <form className= 'row' method='POST' action ={`/places`}>
                     <div className='form-group col-sm-6'>
                         <label htmlFor='name'>Place Name</label>
                         <input className='form-control' id='name' name='name' required />
@@ -77,10 +77,14 @@ function new_form (data) {
                                 <option value="WY">Wyoming</option>
                             </select>	
                     </div>
-                    <div className='form-group'>
+                    <div className='form-group col-sm-6'>
                         <label htmlFor='cuisines'>Cuisines</label>
                         <input className='form-control' id='cuisines' name='cuisines' required/>
                     </div> 
+                    <div className="form-group col-sm-6">
+                        <label for="founded">Founded Year</label>
+                        <input className="form-control" id="founded" name="founded" />
+                    </div>
                     <div className='text-center'>
                         <input className='btn btn-primary' type='submit' value='Add Place' />
                     </div>
