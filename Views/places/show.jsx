@@ -5,12 +5,22 @@ function show (data) {
     return (
         <Def>
           <main>
+
               <div className='showPageFormat'>
                 <h2>{data.place.name}</h2>
                 <img className='img-fluid showPicStyle' src={data.place.pic} alt={data.place.name}></img>
-                <h2>{data.place.cuisines}</h2>
-                <h4>{data.place.city}</h4>
-                <h4>{data.place.state}</h4>
+
+                <h3>
+                    Located in {data.place.city}, {data.place.state}
+                </h3>
+
+                <h3>
+                    {data.place.showEstablished()}
+                </h3>
+                <h4>
+                    Serving {data.place.cuisines}
+                </h4>
+  
                 <h2>Rating</h2>
                 <h5>Currently Unrated</h5>
                 <h2>Comments</h2>
