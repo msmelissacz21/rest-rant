@@ -4,6 +4,7 @@ require('dotenv').config()
 const express = require('express')
 const placesRoutes = require('./controllers/places')
 const methodOverride = require('method-override')
+const commentsRoutes = require('./controllers/comments')
 const app = express()
 
 
@@ -19,6 +20,7 @@ app.use(methodOverride('_method'))
 
 // Controllers and Routes
 app.use('/places', placesRoutes)
+app.use('/places', commentsRoutes)
 
 app.get('/', (req, res) => {
     res.render('home/home')
