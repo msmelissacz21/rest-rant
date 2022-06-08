@@ -2,11 +2,20 @@ const React = require('react')
 const Def = require('../default')
 
 function new_form (data) {
+    let message = ''
+        if (data.message) {
+            message = (
+                <h4 className="alert-danger">
+                    {data.message}
+                </h4>
+            )
+        }
     console.log(data.id)
     return (
         <Def>
             <main>
                 <h1>Add a New Place</h1>
+                {message}
                 <form className= 'row' method='POST' action ={`/places`}>
                     <div className='form-group col-sm-6'>
                         <label htmlFor='name'>Place Name</label>
