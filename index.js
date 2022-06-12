@@ -30,7 +30,7 @@ app.use('/p-comment', commentsRoutes)
 
 
 
-
+// get
 app.get('/', (req, res) => {
     res.render('home/home')
 })
