@@ -2,6 +2,7 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
+    console.log(data.place.id)
     let comments = (
         <h3 className="inactive">
             No comments yet!
@@ -42,6 +43,13 @@ function show (data) {
   
                 <h2>Comments</h2>
                 {comments}
+
+                <div className='row container-fluid'>
+                    <a href={`/p-comment/create/${data.place.id}`} className='btn btn-primary col-sm-3'>
+                        Add a comment
+                    </a>
+                </div>
+
                 
                 <div className='row container-fluid'>
                     <a href={`/places/${data.id}/edit`} className='btn btn-warning col-sm-3'>

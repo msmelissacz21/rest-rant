@@ -6,9 +6,13 @@ const placesRoutes = require('./controllers/places')
 const methodOverride = require('method-override')
 const commentsRoutes = require('./controllers/comments')
 const app = express()
+var bodyParser = require("body-parser");
 
 
 
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 // Express Settings
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
@@ -20,7 +24,12 @@ app.use(methodOverride('_method'))
 
 // Controllers and Routes
 app.use('/places', placesRoutes)
-app.use('/places', commentsRoutes)
+app.use('/p-comment', commentsRoutes)
+
+
+
+
+
 
 app.get('/', (req, res) => {
     res.render('home/home')

@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const db = require('../models')
 
+// get localhost:3000/places
 router.get('/', (req, res) => {
     console.log('here')
     db.Place.find()
@@ -13,6 +14,7 @@ router.get('/', (req, res) => {
     })
 })
 
+// post localhost:3000/places
 router.post('/', (req, res) => {
   db.Place.create(req.body)
   .then(() => {
@@ -36,15 +38,17 @@ router.post('/', (req, res) => {
 })
 
   
-
+// get localhost:3000/places/new
 router.get('/new', (req, res) => {
   res.render('places/new')
 })
 
-router.get('/:id', (req, res) => {
-    db.Place.findById(req.params.id)
+// get localhost:3000/places/id
+router.get('/:placeid', (req, res) => {
+    db.Place.findById(req.params.placeid)
     .populate('comments')
     .then(place => {
+      console.log('id: ' + place.id)
         console.log(place.comments)
         res.render('places/show', { place })
     })
