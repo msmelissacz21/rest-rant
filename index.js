@@ -33,7 +33,7 @@ app.use('/p-comment', commentsRoutes)
 // get
 app.get('/', (req, res) => {
   console.log('here')
-    res.render('home/home')
+    res.render('home')
 })
 
 app.get('*', (req, res) => {
