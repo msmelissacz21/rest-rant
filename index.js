@@ -8,16 +8,6 @@ const commentsRoutes = require('./controllers/comments')
 const app = express()
 var bodyParser = require("body-parser");
 
-// Require static assets from public folder
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Set 'views' directory for any views 
-// being rendered res.render()
-app.set('views', path.join(__dirname, 'views'));
-
-// Set view engine as EJS
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
 
 
 
@@ -32,6 +22,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 
 
+app.set('views', path.join(__dirname, 'views'));
 
 // Controllers and Routes
 app.use('/places', placesRoutes)
