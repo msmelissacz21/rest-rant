@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join('', 'views'));
 
 // Controllers and Routes
 app.use('/places', placesRoutes)
