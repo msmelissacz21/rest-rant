@@ -21,9 +21,6 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 
-
-app.set('views', join(__dirname, 'views'));
-
 // Controllers and Routes
 app.use('/places', placesRoutes)
 app.use('/p-comment', commentsRoutes)
